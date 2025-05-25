@@ -23,7 +23,7 @@ body {
     width: 100%;
     background: linear-gradient(to top, #0c0000, #1b0244);
     height: 50px;
- 
+
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -33,9 +33,37 @@ body {
 
 a:link {
     color: white;
-    
+
 }
 
-a:visited{
+a:visited {
     color: rgb(199, 223, 188);
+}
+
+.telaprincipal {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 100%;
+    background: linear-gradient(to top, #0c0000, #1b0244);
+
+    text-align: center;
+    padding-top:5px;
+}
+
+.l1 {
+    color: white;
+    margin: 5px;
+}
+
+.le1{
+    width: 10%;
+}
+
+.b1{
+    width: 140px;
+    margin: 5px;
+}
+
+.n1{
+    width: 10px;
 }
