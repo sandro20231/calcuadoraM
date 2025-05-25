@@ -7,16 +7,20 @@
         <label class="l1">Digite a nota:</label>
         <input type="text" name="le1" class="le1"><br>
         <button type="submit" class="b1">Calcular</button><br>
-        <input type="text" class="n1" name="n1" value="{{grau1}}">
-        <input type="text" class="n1" name="n2" value="{{grau2}}">
-        <input type="text" class="n1" name="n3" value="{{grau3}}">
-        <input type="text" class="n1" name="n4" value="{{grau4}}">
-        <input type="text" class="n1" name="n5" value="{{grau5}}">
-        <input type="text" class="n1" name="n6" value="{{grau6}}">
-        <input type="text" class="n1" name="n7" value="{{grau7}}">
-        
+        <div class="escala {% if not ativado %}desabilitado{% endif %}">
+            <input type="text" class="n1" name="n1" value="{{grau1}}">
+            <input type="text" class="n1" name="n2" value="{{grau2}}">
+            <input type="text" class="n1" name="n3" value="{{grau3}}">
+            <input type="text" class="n1" name="n4" value="{{grau4}}">
+            <input type="text" class="n1" name="n5" value="{{grau5}}">
+            <input type="text" class="n1" name="n6" value="{{grau6}}">
+            <input type="text" class="n1" name="n7" value="{{grau7}}">
+
+        </div>
+
     </form>
-    <div>
+
+    <div class="campoharmonico {% if not ativado %}desabilitado{% endif %}">
         <h2 class="titulo2">Campo harmônico:</h2>
         <input type="text" class="n2" name="n8" value="{{grau1}}">
         <input type="text" class="n2" name="n9" value="{{grau2}}">
@@ -51,7 +55,8 @@
         <input type="text" class="n1" name="n35" value="{{grau6}}">
 
     </div>
-    <div>
+
+    <div class="acordes {% if not ativado %}desabilitado{% endif %}">
         <h2 class="titulo2">Acordes tríade:</h2>
         <ul>
             <li>{{grau1}}</li>

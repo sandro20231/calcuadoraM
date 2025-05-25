@@ -14,14 +14,15 @@
     <header class="titulo">
         Calculadora musical
     </header>
-
+    <div class="anuncio">
+        <p>Caso tenha gostado de nosso conteúdo e queira colaborar com o criador envie um pix para (11)982886381</p>
+    </div>
     <nav class="barranavegacao">
         <a href="{% url 'escalamaior' %}">Escala Maior</a>
         <a href="{% url 'menor' %}">Escala menor</a>
         <a href="{% url 'menorharmonica' %}">Escala menor harmônica</a>
         <a href="{% url 'menormelodica' %}">Escala menor melódica</a>
-        <a href="#">Login</a>
-        <a href="#">Logout</a>
+
     </nav>
     <div>
         {% block body %}

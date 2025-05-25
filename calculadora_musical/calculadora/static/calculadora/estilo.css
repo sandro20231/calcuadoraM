@@ -80,9 +80,35 @@ a:visited {
     width: 5%;
     background-color: aqua;
     border: 1px solid black;
+
 }
 
 li {
     color: white;
     text-align: left;
+}
+
+.anuncio {
+    border: 2px, solid, red;
+    border-radius: 10px;
+    background-color: yellow;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.desabilitado {
+    pointer-events: none;
+    /* impede clique e foco */
+    opacity: 0;
+    /* aparência "desativada" */
+}
+
+.erro {
+    color: red;
+    border: 1px solid white;
+    background: linear-gradient(to top, #0c0000, #1b0244);
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
 }
