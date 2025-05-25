@@ -1,0 +1,79 @@
+{% extends "calculadora/layout.html" %}
+
+{% block body %}
+<div class="telaprincipal">
+    <form action="{% url 'menor' %}" method="post">
+        {% csrf_token %}
+        <label class="l1">Digite a nota:</label>
+        <input type="text" name="le2" class="le1"><br>
+        <button type="submit" class="b1">Calcular</button><br>
+        <input type="text" class="n1" name="n1" value="{{grau1}}">
+        <input type="text" class="n1" name="n2" value="{{grau2}}">
+        <input type="text" class="n1" name="n3" value="{{grau3}}">
+        <input type="text" class="n1" name="n4" value="{{grau4}}">
+        <input type="text" class="n1" name="n5" value="{{grau5}}">
+        <input type="text" class="n1" name="n6" value="{{grau6}}">
+        <input type="text" class="n1" name="n7" value="{{grau7}}">
+        <label> teste</label>
+    </form>
+    <div>
+        <h2 class="titulo2">Campo harmônico:</h2>
+        <input type="text" class="n2" name="n8" value="{{grau1}}">
+        <input type="text" class="n2" name="n9" value="{{grau2}}">
+        <input type="text" class="n2" name="n10" value="{{grau3}}">
+        <input type="text" class="n2" name="n11" value="{{grau4}}">
+        <input type="text" class="n2" name="n12" value="{{grau5}}">
+        <input type="text" class="n2" name="n13" value="{{grau6}}">
+        <input type="text" class="n2" name="n14" value="{{grau7}}">
+        <br>
+        <input type="text" class="n1" name="n15" value="{{grau3}}">
+        <input type="text" class="n1" name="n16" value="{{grau4}}">
+        <input type="text" class="n1" name="n17" value="{{grau5}}">
+        <input type="text" class="n1" name="n18" value="{{grau6}}">
+        <input type="text" class="n1" name="n19" value="{{grau7}}">
+        <input type="text" class="n1" name="n20" value="{{grau1}}">
+        <input type="text" class="n1" name="n21" value="{{grau2}}">
+        <br>
+        <input type="text" class="n2" name="n22" value="{{grau5}}">
+        <input type="text" class="n2" name="n23" value="{{grau6}}">
+        <input type="text" class="n2" name="n24" value="{{grau7}}">
+        <input type="text" class="n2" name="n25" value="{{grau1}}">
+        <input type="text" class="n2" name="n26" value="{{grau2}}">
+        <input type="text" class="n2" name="n27" value="{{grau3}}">
+        <input type="text" class="n2" name="n28" value="{{grau4}}">
+        <br>
+        <input type="text" class="n1" name="n29" value="{{grau7}}">
+        <input type="text" class="n1" name="n30" value="{{grau1}}">
+        <input type="text" class="n1" name="n31" value="{{grau2}}">
+        <input type="text" class="n1" name="n32" value="{{grau3}}">
+        <input type="text" class="n1" name="n33" value="{{grau4}}">
+        <input type="text" class="n1" name="n34" value="{{grau5}}">
+        <input type="text" class="n1" name="n35" value="{{grau6}}">
+
+    </div>
+    <div>
+        <h2 class="titulo2">Acordes tríade:</h2>
+        <ul>
+            <li>{{grau1}}m</li>
+            <li>{{grau2}}º</li>
+            <li>{{grau3}}</li>
+            <li>{{grau4}}m</li>
+            <li>{{grau5}}m</li>
+            <li>{{grau6}}</li>
+            <li>{{grau7}}</li>
+
+        </ul>
+        <h2 class="titulo2">Acordes tétrade:</h2>
+        <ul>
+            <li>{{grau1}}m7</li>
+            <li>{{grau2}}m7(b5)</li>
+            <li>{{grau3}}7+</li>
+            <li>{{grau4}}m7</li>
+            <li>{{grau5}}m7</li>
+            <li>{{grau6}}7+</li>
+            <li>{{grau7}}7</li>
+
+        </ul>
+
+    </div>
+    {% endblock %}

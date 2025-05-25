@@ -1,5 +1,5 @@
 from django.test import TestCase, Client
-from .acoes import traduzir_numero
+from .intervalos import traduzir_numero, segundamaior, segundamenor, tercamenor, tercamaior, quartajusta, quintadiminuta, quintajusta, sextamenor, sextamaior, setimamenor, setimamaior
 # Create your tests here.
 
 
@@ -28,9 +28,60 @@ class testes(TestCase):
     def testnota6(self):
         """ab é 9"""
         self.assertEqual(traduzir_numero("ab"), 9)
-    # testa de conexão com tela incial
+    # testa de conexão com tela de escala maior
 
     def test_telainicial(self):
         c = Client()
-        tela = c.get('')
+        tela = c.get('/maior/')
         self.assertEqual(tela.status_code, 200)
+
+    # teste de conexão com tela de escala menor
+    def test_telamenor(self):
+        c = Client()
+        tela = c.get('/menor/')
+        self.assertEqual(tela.status_code, 200)
+
+    # testes para intervalos:
+    def test_segundamenor(self):
+        """segunda menor de c é c#"""
+        self.assertEqual(segundamenor("c"), "C#")
+
+    def test_segundamaior(self):
+        """segunda maior de B é C#"""
+        self.assertEqual(segundamaior("B"), "C#")
+
+    def test_tercamenor(self):
+        """terça menor de A é C"""
+        self.assertEqual(tercamenor("A"), "C")
+
+    def test_tercamaior(self):
+        """terça maior de c é E"""
+        self.assertEqual(tercamaior("c"), "E")
+
+    def test_quartajusta(self):
+        """quartajusta de c é f"""
+        self.assertEqual(quartajusta("c"), "F")
+
+    def test_quintadiminuta(self):
+        """quinta diminuta de D é G#"""
+        self.assertEqual(quintadiminuta("d"), "G#")
+
+    def test_quintajusta(self):
+        """quinta justa de E é B"""
+        self.assertEqual(quintajusta("e"), "B")
+
+    def test_sextamenor(self):
+        """sexta menor de C é G#"""
+        self.assertEqual(sextamenor("c"), "G#")
+
+    def test_sextamaior(self):
+        """sexta maior de E é C#"""
+        self.assertEqual(sextamaior("e"), "C#")
+
+    def test_setimamenor(self):
+        """setima menor de C é A#"""
+        self.assertEqual(setimamenor("C"), "A#")
+
+    def test_setimamaior(self):
+        """sétima maior de B é A#"""
+        self.assertEqual(setimamaior("B"), "A#")

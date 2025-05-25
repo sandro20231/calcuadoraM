@@ -47,7 +47,8 @@ a:visited {
     background: linear-gradient(to top, #0c0000, #1b0244);
 
     text-align: center;
-    padding-top:5px;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
 .l1 {
@@ -55,15 +56,33 @@ a:visited {
     margin: 5px;
 }
 
-.le1{
+.le1 {
     width: 10%;
 }
 
-.b1{
+.b1 {
     width: 140px;
     margin: 5px;
+    background: linear-gradient(to bottom, #ff0000, black);
+    color: white;
 }
 
-.n1{
-    width: 10px;
+.n1 {
+    width: 5%;
+    border: 1px solid black;
+}
+
+.titulo2 {
+    color: white;
+}
+
+.n2 {
+    width: 5%;
+    background-color: aqua;
+    border: 1px solid black;
+}
+
+li {
+    color: white;
+    text-align: left;
 }
