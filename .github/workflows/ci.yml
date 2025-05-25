@@ -20,4 +20,4 @@ jobs:
 
       - name: Run Django tests
         run: python manage.py test
-        working-directory: calcuadoraM/calculadora_musical
+        working-directory: calculadora_musical
