@@ -11,7 +11,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'  # ou a versão que seu projeto usa
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
@@ -19,5 +19,5 @@ jobs:
           pip install django
 
       - name: Run Django tests
-        run: |
-          python manage.py test
+        run: python manage.py test
+        working-directory: calcuadoraM/calculadora_musical
