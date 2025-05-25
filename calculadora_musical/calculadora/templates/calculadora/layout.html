@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tela inicial</title>
+    <link href="{% static 'calculadora/estilo.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        Calculadora musical
+    </header>
+
+    <nav>
+        <a href="#">Login</a>
+        <a href="#">Logout</a>
+    </nav>
+    <div>
+        {% block body %}
+
+        {% endblock %}
+    </div>
+</body>
+
+</html>
