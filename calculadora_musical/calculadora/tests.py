@@ -41,6 +41,12 @@ class testes(TestCase):
         tela = c.get('/menor/')
         self.assertEqual(tela.status_code, 200)
 
+    # teste de conexão com tela de escala menor harmonica
+    def test_telamenorharmonica(self):
+        c = Client()
+        tela = c.get('/menorharmonica/')
+        self.assertEqual(tela.status_code, 200)
+
     # testes para intervalos:
     def test_segundamenor(self):
         """segunda menor de c é c#"""

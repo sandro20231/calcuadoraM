@@ -1,11 +1,11 @@
-{% extends 'calculadora/layout.html' %}
+{% extends "calculadora/layout.html" %}
 
 {% block body %}
 <div class="telaprincipal">
-    <form action="{% url 'escalamaior' %}" method="post">
+    <form action="{% url 'menorharmonica' %}" method="post">
         {% csrf_token %}
         <label class="l1">Digite a nota:</label>
-        <input type="text" name="le1" class="le1"><br>
+        <input type="text" name="le3" class="le1"><br>
         <button type="submit" class="b1">Calcular</button><br>
         <input type="text" class="n1" name="n1" value="{{grau1}}">
         <input type="text" class="n1" name="n2" value="{{grau2}}">
@@ -54,28 +54,26 @@
     <div>
         <h2 class="titulo2">Acordes tríade:</h2>
         <ul>
-            <li>{{grau1}}</li>
-            <li>{{grau2}}m</li>
-            <li>{{grau3}}m</li>
-            <li>{{grau4}}</li>
+            <li>{{grau1}}m</li>
+            <li>{{grau2}}º</li>
+            <li>{{grau3}}</li>
+            <li>{{grau4}}m</li>
             <li>{{grau5}}</li>
-            <li>{{grau6}}m</li>
+            <li>{{grau6}}</li>
             <li>{{grau7}}º</li>
 
         </ul>
         <h2 class="titulo2">Acordes tétrade:</h2>
         <ul>
-            <li>{{grau1}}7+</li>
-            <li>{{grau2}}m7</li>
-            <li>{{grau3}}m7</li>
-            <li>{{grau4}}7+</li>
+            <li>{{grau1}}m7+</li>
+            <li>{{grau2}}m7(b5)</li>
+            <li>{{grau3}}7+</li>
+            <li>{{grau4}}m7</li>
             <li>{{grau5}}7</li>
-            <li>{{grau6}}m7</li>
+            <li>{{grau6}}7+</li>
             <li>{{grau7}}m7(b5)</li>
 
         </ul>
 
     </div>
-
-</div>
-{% endblock %}
+    {% endblock %}
